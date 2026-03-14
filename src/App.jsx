@@ -8,7 +8,6 @@ import { sessions, timelineRows } from './data/fixDashboardData'
 import './App.css'
 
 function App() {
-  const [theme, setTheme] = useState('dark')
   const [selectedIndex, setSelectedIndex] = useState(0)
 
   const selectedRow = useMemo(
@@ -16,19 +15,9 @@ function App() {
     [selectedIndex],
   )
 
-  const isDark = theme === 'dark'
-
-  const handleToggleTheme = () => {
-    setTheme((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'))
-  }
-
   return (
-    <div className={`fix-shell theme-${theme}`}>
-      <AppHeader
-        selectedRow={selectedRow}
-        isDark={isDark}
-        onToggleTheme={handleToggleTheme}
-      />
+    <div className="fix-shell theme-dark">
+      <AppHeader selectedRow={selectedRow} />
 
       <section className="main-grid">
         <SessionsPanel sessions={sessions} />

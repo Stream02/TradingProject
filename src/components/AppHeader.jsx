@@ -1,4 +1,4 @@
-function AppHeader({ selectedRow, isDark, onToggleTheme }) {
+function AppHeader({ selectedRow }) {
   return (
     <header className="topbar">
       <div className="title">FIX.4.4.CLIENT1-&gt;HUB | In-Progress</div>
@@ -9,14 +9,6 @@ function AppHeader({ selectedRow, isDark, onToggleTheme }) {
             {selectedRow.time} QUT | {selectedRow.msgType} | ID: {selectedRow.clOrdId}
           </span>
         </div>
-        <button
-          type="button"
-          className="theme-toggle"
-          onClick={onToggleTheme}
-          aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
-        >
-          {isDark ? '☀ Light' : '🌙 Dark'}
-        </button>
       </div>
     </header>
   )
