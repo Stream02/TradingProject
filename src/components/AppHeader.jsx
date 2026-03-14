@@ -1,13 +1,18 @@
-function AppHeader({ selectedRow }) {
+function AppHeader() {
   return (
     <header className="topbar">
-      <div className="title">FIX.4.4.CLIENT1-&gt;HUB | In-Progress</div>
-      <div className="topbar-right">
-        <div className="live-wrap">
-          <div className="dot" />
-          <span>
-            {selectedRow.time} QUT | {selectedRow.msgType} | ID: {selectedRow.clOrdId}
-          </span>
+      <div className="topbar-card">
+        <button type="button" className="back-button">
+          <span className="back-arrow">←</span>
+          <span>Back</span>
+        </button>
+
+        <div className="topbar-divider" />
+
+        <div className="topbar-meta">
+          <span className="topbar-section">Certification Results</span>
+          <span className="simulation-label">Simulation ID: 65</span>
+          <span className="status-pill">IN_PROGRESS</span>
         </div>
       </div>
     </header>
